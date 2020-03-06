@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquakes Counter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center p-3">&#127758; Earthquakes Counter &#128221;</h1>
+    
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 pl-5 ml-4">
+                <label for="start">From</label><input type="date" id="start">
+                <label for="end">To</label><input type="date" id="end">
+                <label for="minMagnitude">Min. Magnitude</label><input type="number" id="minMagnitude" min="1" max="5">
+                <label for="maxMagnitude">Max. Magnitude</label><input type="number" id="maxMagnitude" min="5" max="10">
+                <label for="countries">Country</label><select name="countries" id="countries"></select>
+                <button id="show">Show</button>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <p><b>Number of Earthquakes: </b> <span id="earthquakes"></span></p>
+                <p><b>Country: </b> <span id="country"></span></p>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <!-- <div id="container">
+
+                </div> -->
+
+                <table id="earthquakeTable" class="table table-bordered table-dark text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Magnitude</th>
+                        <th scope="col">Date</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                      
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-12">
+                <footer id="footer">Made by Henry Herrera using the <a href="https://earthquake.usgs.gov/fdsnws/event/1/">US Geological Survey API</a></footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
